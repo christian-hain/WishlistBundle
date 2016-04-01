@@ -1,0 +1,34 @@
+SoerenMartius\WishlistBundle\Model\Item:
+    type: entity
+    table: wishlist_item
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        productId:
+            type: integer
+            column: product_id
+            length: 11
+        createdAt:
+            type: datetime
+            column: created_at
+            gedmo:
+                timestampable:
+                    on: create
+        updatedAt:
+            type: datetime
+            column: updated_at
+            gedmo:
+                timestampable:
+                    on: update
+    manyToOne:
+        wishlist:
+            targetEntity: SoerenMartius\WishlistBundle\Model\Wishlist
+            inversedBy: items
+            joinColumn:
+                name: wishlist_id
+                referencedColumnName: id
+    indexes:
+        product_wishlist_index:
+          columns: [ product_id, wishlist_id ]

@@ -1,0 +1,19 @@
+sm_wishlist_index:
+    path:     /wishlist
+    defaults: { _controller: SoerenMartiusWishlistBundle:Wishlist:index }
+    methods: [GET]
+    type: rest
+
+sm_wishlist_create:
+    path:     /wishlist
+    defaults: { _controller: SoerenMartiusWishlistBundle:Wishlist:new }
+    methods: [POST]
+    type: rest
+
+sm_wishlist_show:
+    path:     /wishlist/{id}
+    defaults: { _controller: SoerenMartiusWishlistBundle:Wishlist:show }
+    methods: [GET]
+    requirements:
+        id: \d+
+    type: rest
