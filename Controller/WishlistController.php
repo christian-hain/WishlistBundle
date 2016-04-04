@@ -7,11 +7,11 @@
  * file that was distributed with this source code.
  */
 
-namespace SoerenMartius\WishlistBundle\Controller;
+namespace SoerenMartius\Bundle\WishlistBundle\Controller;
 
 use FOS\RestBundle\Controller\FOSRestController;
 use SoerenMartius\Component\Wishlist\Model\WishlistInterface;
-use SoerenMartius\WishlistBundle\Form\Type\WishlistFormType;
+use SoerenMartius\Bundle\WishlistBundle\Form\Type\WishlistFormType;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;

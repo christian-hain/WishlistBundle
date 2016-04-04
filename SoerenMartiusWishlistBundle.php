@@ -1,6 +1,6 @@
 <?php
 
-namespace SoerenMartius\WishlistBundle;
+namespace SoerenMartius\Bundle\WishlistBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

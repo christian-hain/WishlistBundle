@@ -1,9 +1,9 @@
 services:
     sm_wishlist.manager.wishlist_manager:
         #make configurable
-        class: SoerenMartius\WishlistBundle\Doctrine\ORM\WishlistManager
-        arguments: ["@doctrine.orm.entity_manager", SoerenMartius\WishlistBundle\Model\Wishlist]
+        class: SoerenMartius\Bundle\WishlistBundle\Doctrine\ORM\WishlistManager
+        arguments: ["@doctrine.orm.entity_manager", SoerenMartius\Bundle\WishlistBundle\Model\Wishlist]
 
     sm_wishlist.manager.item_manager:
-        class: SoerenMartius\WishlistBundle\Doctrine\ORM\ItemManager
-        arguments: ["@doctrine.orm.entity_manager", SoerenMartius\WishlistBundle\Model\Item]
+        class: SoerenMartius\Bundle\WishlistBundle\Doctrine\ORM\ItemManager
+        arguments: ["@doctrine.orm.entity_manager", SoerenMartius\Bundle\WishlistBundle\Model\Item]

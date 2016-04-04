@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-namespace SoerenMartius\WishlistBundle\Manager;
+namespace SoerenMartius\Bundle\WishlistBundle\Manager;
 
 /**
  * @author Soeren Martius <soeren.martius@gmail.com>

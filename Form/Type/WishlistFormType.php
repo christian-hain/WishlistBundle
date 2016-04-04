@@ -7,10 +7,10 @@
  * file that was distributed with this source code.
  */
 
-namespace SoerenMartius\WishlistBundle\Form\Type;
+namespace SoerenMartius\Bundle\WishlistBundle\Form\Type;
 
 use Symfony\Component\Form\{ AbstractType, FormBuilderInterface };
-use SoerenMartius\WishlistBundle\Model\Wishlist;
+use SoerenMartius\Bundle\WishlistBundle\Model\Wishlist;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 

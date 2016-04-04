@@ -1,4 +1,4 @@
-SoerenMartius\WishlistBundle\Model\Wishlist:
+SoerenMartius\Bundle\WishlistBundle\Model\Wishlist:
     type: entity
     table: wishlist
     id:
@@ -29,7 +29,7 @@ SoerenMartius\WishlistBundle\Model\Wishlist:
                     on: update
     oneToMany:
         items:
-            targetEntity: SoerenMartius\WishlistBundle\Model\Item
+            targetEntity: SoerenMartius\Bundle\WishlistBundle\Model\Item
             mappedBy: wishlist
             joinColumn:
                 name: id

@@ -7,10 +7,10 @@
  * file that was distributed with this source code.
  */
 
-namespace SoerenMartius\WishlistBundle\Doctrine\ORM;
+namespace SoerenMartius\Bundle\WishlistBundle\Doctrine\ORM;
 
 use Doctrine\Common\Persistence\ObjectManager;
-use SoerenMartius\WishlistBundle\Manager\AbstractWishlistManager as BaseManager;
+use SoerenMartius\Bundle\WishlistBundle\Manager\AbstractWishlistManager as BaseManager;
 use SoerenMartius\Component\Wishlist\Model\WishlistInterface;
 
 /**

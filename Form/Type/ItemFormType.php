@@ -7,12 +7,12 @@
  * file that was distributed with this source code.
  */
 
-namespace SoerenMartius\WishlistBundle\Form\Type;
+namespace SoerenMartius\Bundle\WishlistBundle\Form\Type;
 
 use Symfony\Component\Form\{ AbstractType, FormBuilderInterface };
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use SoerenMartius\WishlistBundle\Model\{ Item, Wishlist};
+use SoerenMartius\Bundle\WishlistBundle\Model\{ Item, Wishlist};
 
 /**
  * @author Soeren Martius <soeren.martius@gmail.com>

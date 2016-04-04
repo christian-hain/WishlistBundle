@@ -1,6 +1,6 @@
 <?php
 
-namespace SoerenMartius\WishlistBundle\DependencyInjection;
+namespace SoerenMartius\Bundle\WishlistBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;

@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-namespace SoerenMartius\WishlistBundle\Model;
+namespace SoerenMartius\Bundle\WishlistBundle\Model;
 
 use SoerenMartius\Component\Wishlist\Model\Item as BaseItem;
 

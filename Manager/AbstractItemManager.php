@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-namespace SoerenMartius\WishlistBundle\Manager;
+namespace SoerenMartius\Bundle\WishlistBundle\Manager;
 
 use SoerenMartius\Component\Wishlist\Model\ItemInterface;
 
