@@ -3,3 +3,7 @@ services:
         #make configurable
         class: SoerenMartius\WishlistBundle\Doctrine\ORM\WishlistManager
         arguments: ["@doctrine.orm.entity_manager", SoerenMartius\WishlistBundle\Model\Wishlist]
+
+    sm_wishlist.manager.item_manager:
+        class: SoerenMartius\WishlistBundle\Doctrine\ORM\ItemManager
+        arguments: ["@doctrine.orm.entity_manager", SoerenMartius\WishlistBundle\Model\Item]

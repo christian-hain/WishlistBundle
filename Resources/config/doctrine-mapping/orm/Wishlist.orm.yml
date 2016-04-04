@@ -34,3 +34,6 @@ SoerenMartius\WishlistBundle\Model\Wishlist:
             joinColumn:
                 name: id
                 referencedColumnName: wishlist_id
+    indexes:
+        wishlist_customer_index:
+            columns: [ id, customer_id ]

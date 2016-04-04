@@ -10,13 +10,13 @@
 namespace SoerenMartius\WishlistBundle\Doctrine\ORM;
 
 use Doctrine\Common\Persistence\ObjectManager;
-use SoerenMartius\WishlistBundle\Manager\AbstractWishlistManager as BaseManager;
-use SoerenMartius\Component\Wishlist\Model\WishlistInterface;
+use SoerenMartius\WishlistBundle\Manager\AbstractItemManager as BaseManager;
+use SoerenMartius\Component\Wishlist\Model\ItemInterface;
 
 /**
  * @author Soeren Martius <soeren.martius@gmail.com>
  */
-class WishlistManager extends BaseManager
+class ItemManager extends BaseManager
 {
     /** @var ObjectManager */
     private $objectManager;
@@ -28,7 +28,7 @@ class WishlistManager extends BaseManager
     private $class;
 
     /**
-     * WishlistManager constructor.
+     * ItemManager constructor.
      *
      * @param ObjectManager $objectManager
      * @param string        $class
@@ -53,7 +53,7 @@ class WishlistManager extends BaseManager
     /**
      * {@inheritdoc}
      */
-    public function findWishlistBy(array $criteria)
+    public function findItemBy(array $criteria)
     {
         return $this->repository->findOneBy($criteria);
     }
@@ -61,7 +61,7 @@ class WishlistManager extends BaseManager
     /**
      * {@inheritdoc}
      */
-    public function findWishlistsBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+    public function findItemsBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
     {
         return $this->repository->findBy($criteria, $orderBy, $limit, $offset);
     }
@@ -69,18 +69,20 @@ class WishlistManager extends BaseManager
     /**
      * {@inheritdoc}
      */
-    public function deleteWishlist(WishlistInterface $wishlist)
+    public function updateItem(ItemInterface $item)
     {
-        $this->objectManager->remove($wishlist);
+        $this->objectManager->persist($item);
         $this->objectManager->flush();
     }
 
     /**
      * {@inheritdoc}
      */
-    public function updateWishlist(WishlistInterface $wishlist)
+    public function deleteItem(ItemInterface $item)
     {
-        $this->objectManager->persist($wishlist);
+        $this->objectManager->refresh($item);
         $this->objectManager->flush();
     }
+
+
 }

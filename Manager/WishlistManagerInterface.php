@@ -9,7 +9,7 @@
 
 namespace SoerenMartius\WishlistBundle\Manager;
 
-use SoerenMartius\WishlistBundle\Model\WishlistInterface;
+use SoerenMartius\Component\Wishlist\Model\WishlistInterface;
 
 /**
  * @author Soeren Martius <soeren.martius@gmail.com>
@@ -17,11 +17,14 @@ use SoerenMartius\WishlistBundle\Model\WishlistInterface;
 interface WishlistManagerInterface
 {
     /**
-     * @param array $criteria
+     * @param array      $criteria
+     * @param array|null $orderBy
+     * @param null       $limit
+     * @param null       $offset
      *
      * @return WishlistInterface[]|null
      */
-    public function findWishlistsBy(array $criteria);
+    public function findWishlistsBy(array $criteria, array $orderBy = null, $limit = null, $offset = null);
 
     /**
      * @param array $criteria
@@ -31,7 +34,7 @@ interface WishlistManagerInterface
     public function findWishlistBy(array $criteria);
 
     /**
-     * @param $id
+     * @param mixed $id
      *
      * @return WishlistInterface|null
      */
@@ -47,7 +50,7 @@ interface WishlistManagerInterface
     /**
      * @return WishlistInterface
      */
-    public function createWishlist();
+    public function createWishlist(): WishlistInterface;
 
     /**
      * @param WishlistInterface $wishlist

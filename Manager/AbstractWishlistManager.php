@@ -9,12 +9,12 @@
 
 namespace SoerenMartius\WishlistBundle\Manager;
 
-use SoerenMartius\WishlistBundle\Model\WishlistInterface;
+use SoerenMartius\Component\Wishlist\Model\WishlistInterface;
 
 /**
  * @author Soeren Martius <soeren.martius@gmail.com>
  */
-abstract class WishlistManager implements
+abstract class AbstractWishlistManager implements
     WishlistManagerInterface,
     ManagerInterface
 {
@@ -40,7 +40,7 @@ abstract class WishlistManager implements
     public function createWishlist(): WishlistInterface
     {
         $class = $this->getClass();
-        $wishlist = new $class;
+        $wishlist = new $class();
 
         return $wishlist;
     }

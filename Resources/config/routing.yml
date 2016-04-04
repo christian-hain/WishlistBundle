@@ -4,16 +4,47 @@ sm_wishlist_index:
     methods: [GET]
     type: rest
 
+sm_wishlist_show:
+    path:     /wishlist/{id}
+    defaults: { _controller: SoerenMartiusWishlistBundle:Wishlist:show }
+    methods: [GET]
+    # wont use this here since an id could also be an string ( if we use mongodb as database )
+    #requirements:
+    #    id: \d+
+    type: rest
+
 sm_wishlist_create:
     path:     /wishlist
     defaults: { _controller: SoerenMartiusWishlistBundle:Wishlist:new }
     methods: [POST]
     type: rest
 
-sm_wishlist_show:
+sm_wishlist_edit:
     path:     /wishlist/{id}
-    defaults: { _controller: SoerenMartiusWishlistBundle:Wishlist:show }
+    defaults: { _controller: SoerenMartiusWishlistBundle:Wishlist:edit }
+    methods: [PUT, PATCH]
+    type: rest
+
+sm_wishlist_item_index:
+    path:     /wishlist/{wishlistId}/item
+    defaults: { _controller: SoerenMartiusWishlistBundle:Item:index }
     methods: [GET]
-    requirements:
-        id: \d+
+    type: rest
+
+sm_wishlist_item_show:
+    path:     /wishlist/{wishlistId}/item/{id}
+    defaults: { _controller: SoerenMartiusWishlistBundle:Item:show }
+    methods: [GET]
+    type: rest
+
+sm_wishlist_item_create:
+    path:     /wishlist/{wishlistId}/item
+    defaults: { _controller: SoerenMartiusWishlistBundle:Item:new }
+    methods: [POST]
+    type: rest
+
+sm_wishlist_item_edit:
+    path:     /wishlist/{wishlistId}/item/{itemId}
+    defaults: { _controller: SoerenMartiusWishlistBundle:Item:edit }
+    methods: [PUT, PATCH]
     type: rest

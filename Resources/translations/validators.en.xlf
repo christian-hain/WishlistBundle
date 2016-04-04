@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+
+            <trans-unit id="sm_wishlist.sharing_code.unique">
+                <source>sm_wishlist.sharing_code.unique</source>
+                <target>The sharing code needs to be unique. There is already a persisted entry for the given sharing code.</target>
+            </trans-unit>
+
+            <trans-unit id="sm_wishlist.customer_id.unique">
+                <source>sm_wishlist.customer_id.unique</source>
+                <target>The customer id needs to be unique. There is already a persisted entry for the given customer id.</target>
+            </trans-unit>
+
+            <trans-unit id="sm_wishlist.customer_id.not_null">
+                <source>sm_wishlist.customer_id.not_null</source>
+                <target>The customer id can't be null.</target>
+            </trans-unit>
+
+            <trans-unit id="sm_wishlist.sharing_code.not_null">
+                <source>sm_wishlist.sharing_code.not_null</source>
+                <target>The sharing code can't be null.</target>
+            </trans-unit>
+
+            <trans-unit id="sm_wishlist.sharing_code.min">
+                <source>sm_wishlist.sharing_code.min</source>
+                <target>The sharing code should be at least {{ limit }} characters long.</target>
+            </trans-unit>
+
+            <trans-unit id="sm_wishlist.sharing_code.max">
+                <source>sm_wishlist.sharing_code.max</source>
+                <target>The sharing code shouldn't be longer then {{ limit }} characters.</target>
+            </trans-unit>
+
+            <trans-unit id="sm_wishlist.wishlist_product.unique">
+                <source>sm_wishlist.wishlist_product.unique</source>
+                <target>You can only add the product once to your wishlist.</target>
+            </trans-unit>
+
+            <trans-unit id="sm_wishlist.product_id.not_null">
+                <source>sm_wishlist.product_id.not_null</source>
+                <target>The product id can't  be null.</target>
+            </trans-unit>
+
+            <trans-unit id="sm_wishlist.wishlist.not_null">
+                <source>sm_wishlist.wishlist.not_null</source>
+                <target>The wishlist can't  be null.</target>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

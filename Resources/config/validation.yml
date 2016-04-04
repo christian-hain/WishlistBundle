@@ -1,0 +1,29 @@
+SoerenMartius\WishlistBundle\Model\Wishlist:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: sharingCode
+            message: sm_wishlist.sharing_code.unique
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: customerId
+            message: sm_wishlist.customer_id.unique
+    properties:
+        customerId:
+            - NotNull: { message: sm_wishlist.customer_id.not_null }
+        sharingCode:
+            - NotNull: { message: sm_wishlist.sharing_code.not_null }
+            - Length:
+                min: 3
+                minMessage: sm_wishlist.sharing_code.min
+                max: 50
+                maxMessage: sm_wishlist.sharing_code.max
+
+SoerenMartius\WishlistBundle\Model\Item:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: [ productId, wishlist ]
+            message: sm_wishlist.wishlist_product.unique
+    properties:
+        productId:
+            - NotNull: { message: sm_wishlist.product_id.not_null }
+        wishlist:
+            - NotNull: { message: sm_wishlist.wishlist.not_null }
