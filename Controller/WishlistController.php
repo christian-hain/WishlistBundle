@@ -59,12 +59,7 @@ class WishlistController extends FOSRestController
      */
     public function editAction($id, Request $request)
     {
-        $wishlist = $this->get('sm_wishlist.manager.wishlist_manager')->findWishlistBy(
-            [
-                'id' => $id
-            ]
-        );
-
+        $wishlist = $this->get('sm_wishlist.manager.wishlist_manager')->findWishlistBy(['id' => $id]);
         if (! $wishlist) {
             throw new NotFoundHttpException('No wishlist found for id' . $id);
         }
@@ -114,6 +109,20 @@ class WishlistController extends FOSRestController
         return $this->handleView(
             $this->view($form)
         );
+    }
+
+    public function deleteAction($id)
+    {
+        $manager = $this->get('sm_wishlist.manager.wishlist_manager');
+
+        $wishlist = $manager->findWishlistBy(['id' => $id]);
+        if (! $wishlist) {
+            throw new NotFoundHttpException('No wishlist found for id' . $id);
+        }
+
+        $manager->deleteWishlist($wishlist);
+
+        return;
     }
 
     /**

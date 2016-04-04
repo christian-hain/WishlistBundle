@@ -1,0 +1,41 @@
+{
+    "name": "soerenmartius/wishlistbundle",
+    "type": "symfony-bundle",
+    "description": "Wishlist management for symfony applocations",
+    "keywords": ["shop", "ecommerce", "wishlist"],
+    "homepage": "https://soerenmartius.github.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Soeren Martius",
+            "homepage": "https://soerenmartius.github.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "soerenmartius/wishlist": "dev-master",
+        "doctrine/common": ">=2.5-dev,<2.7-dev",
+        "symfony/framework-standard-edition": "3.0.*",
+        "willdurand/hateoas-bundle": "^1.1",
+        "stof/doctrine-extensions-bundle": "^1.2",
+        "friendsofsymfony/rest-bundle": "^2.0@dev",
+        "jms/serializer-bundle": "^1.1"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "^2.4"
+    },
+    "config": {
+        "bin-dir": "vendor/bin"
+    },
+    "autoload": {
+        "psr-4": { "SoerenMartius\\Bundle\\WishlistBundle\\": "" }
+    },
+    "target-dir": "SoerenMartius/Bundle/WishlistBundle",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.0-dev"
+        }
+    }
+}
