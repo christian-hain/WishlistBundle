@@ -1,7 +1,7 @@
 {
     "name": "soerenmartius/wishlistbundle",
     "type": "symfony-bundle",
-    "description": "Wishlist management for symfony applocations",
+    "description": "Wishlist management for symfony applications",
     "keywords": ["shop", "ecommerce", "wishlist"],
     "homepage": "https://soerenmartius.github.com",
     "license": "MIT",
