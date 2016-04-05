@@ -94,21 +94,21 @@ class ItemController extends FOSRestController
 
     /**
      * @param         $wishlistId
-     * @param         $itemId
+     * @param         $id
      * @param Request $request
      *
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function editAction($wishlistId, $itemId, Request $request)
+    public function editAction($wishlistId, $id, Request $request)
     {
         $wishlist = $this->get('sm_wishlist.manager.wishlist_manager')->findWishlistById($wishlistId);
         if (! $wishlist) {
             throw new NotFoundHttpException('No wishlist found for id ' . $wishlistId);
         }
 
-        $item = $this->get('sm_wishlist.manager.item_manager')->findItemById($itemId);
+        $item = $this->get('sm_wishlist.manager.item_manager')->findItemById($id);
         if (! $item) {
-            throw new NotFoundHttpException('No item found for id ' . $itemId);
+            throw new NotFoundHttpException('No item found for id ' . $id);
         }
 
         $form = $this->getForm($item, ['method' => $request->getMethod()]);
@@ -127,6 +127,27 @@ class ItemController extends FOSRestController
 
         return $this->handleView(
             $this->view($form)
+        );
+    }
+
+    /**
+     * @param $id
+     *
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function deleteAction($id)
+    {
+        $manager = $this->get('sm_wishlist.manager.item_manager');
+
+        $item = $manager->findItemById($id);
+        if (! $item) {
+            throw new NotFoundHttpException('No item found for id ' . $id);
+        }
+
+        $manager->deleteItem($item);
+
+        return $this->handleView(
+            $this->view($this->get('translator')->trans('sm_wishlist.item.deleted'))
         );
     }
 

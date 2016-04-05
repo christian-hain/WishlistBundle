@@ -31,6 +31,7 @@ SoerenMartius\Bundle\WishlistBundle\Model\Wishlist:
         items:
             targetEntity: SoerenMartius\Bundle\WishlistBundle\Model\Item
             mappedBy: wishlist
+            cascade: ["persist", "remove"]
             joinColumn:
                 name: id
                 referencedColumnName: wishlist_id

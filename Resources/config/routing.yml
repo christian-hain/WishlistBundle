@@ -25,6 +25,12 @@ sm_wishlist_edit:
     methods: [PUT, PATCH]
     type: rest
 
+sm_wishlist_delete:
+    path:     /wishlist/{id}
+    defaults: { _controller: SoerenMartiusWishlistBundle:Wishlist:delete }
+    methods: [DELETE]
+    type: rest
+
 sm_wishlist_item_index:
     path:     /wishlist/{wishlistId}/item
     defaults: { _controller: SoerenMartiusWishlistBundle:Item:index }
@@ -44,7 +50,13 @@ sm_wishlist_item_create:
     type: rest
 
 sm_wishlist_item_edit:
-    path:     /wishlist/{wishlistId}/item/{itemId}
+    path:     /wishlist/{wishlistId}/item/{id}
     defaults: { _controller: SoerenMartiusWishlistBundle:Item:edit }
     methods: [PUT, PATCH]
+    type: rest
+
+sm_wishlist_item_delete:
+    path:     /wishlist/{wishlistId}/item/{id}
+    defaults: { _controller: SoerenMartiusWishlistBundle:Item:delete }
+    methods: [DELETE]
     type: rest

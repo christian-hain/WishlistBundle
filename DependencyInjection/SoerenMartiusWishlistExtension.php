@@ -2,6 +2,7 @@
 
 namespace SoerenMartius\Bundle\WishlistBundle\DependencyInjection;
 
+use Hateoas\Configuration\Metadata\Driver\YamlDriver;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;

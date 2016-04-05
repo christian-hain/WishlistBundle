@@ -111,6 +111,11 @@ class WishlistController extends FOSRestController
         );
     }
 
+    /**
+     * @param $id
+     *
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
     public function deleteAction($id)
     {
         $manager = $this->get('sm_wishlist.manager.wishlist_manager');
@@ -122,7 +127,9 @@ class WishlistController extends FOSRestController
 
         $manager->deleteWishlist($wishlist);
 
-        return;
+        return $this->handleView(
+            $this->view($this->get('translator')->trans('sm_wishlist.wishlist.deleted'))
+        );
     }
 
     /**

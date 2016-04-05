@@ -10,9 +10,32 @@
 namespace SoerenMartius\Bundle\WishlistBundle\Model;
 
 use SoerenMartius\Component\Wishlist\Model\Wishlist as BaseWishlist;
+use Hateoas\Configuration\Annotation as Hateoas;
 
 /**
  * @author Soeren Martius <soeren.martius@gmail.com>
+ *
+ * @Hateoas\Relation(
+ *      "get",
+ *      href = @Hateoas\Route(
+ *          "sm_wishlist_show",
+ *          parameters = { "id" = "expr(object.getId())" }
+ *      )
+ * )
+ * @Hateoas\Relation(
+ *      "put|patch",
+ *      href = @Hateoas\Route(
+ *          "sm_wishlist_edit",
+ *          parameters = { "id" = "expr(object.getId())" }
+ *      )
+ * )
+ * @Hateoas\Relation(
+ *      "delete",
+ *      href = @Hateoas\Route(
+ *          "sm_wishlist_delete",
+ *          parameters = { "id" = "expr(object.getId())" }
+ *      )
+ * )
  */
 class Wishlist extends BaseWishlist implements WishlistInterface
 {

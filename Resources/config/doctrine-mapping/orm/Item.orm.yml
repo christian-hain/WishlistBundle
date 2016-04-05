@@ -26,6 +26,7 @@ SoerenMartius\Bundle\WishlistBundle\Model\Item:
         wishlist:
             targetEntity: SoerenMartius\Bundle\WishlistBundle\Model\Wishlist
             inversedBy: items
+            cascade: ["persist"]
             joinColumn:
                 name: wishlist_id
                 referencedColumnName: id
