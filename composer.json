@@ -30,7 +30,6 @@
     "autoload": {
         "psr-4": { "SoerenMartius\\Bundle\\WishlistBundle\\": "" }
     },
-    "target-dir": "SoerenMartius/Bundle/WishlistBundle",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "extra": {
